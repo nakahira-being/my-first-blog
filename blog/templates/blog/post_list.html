@@ -10,10 +10,13 @@
         </div>
 
         <div>
-            <p>published on 17/05/2023</p>
-            <h2>
-                <a href="">post</a>
-            </h2>
+            {%for post in posts%}
+                <div>
+                    <p>published:{{post.published_data}}</p>
+                    <h2><a href="">{{post.title}}</a></h2>
+                    <p>{{post.text|linebreaksbr}}</p>
+                </div>
+            {%endfor%}
         </div>
     </body>
 </html>
